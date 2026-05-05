@@ -4,6 +4,7 @@ import Sidebar from './components/layout/Sidebar';
 import DashboardPage from './pages/DashboardPage';
 import PatientDetailPage from './pages/PatientDetailPage';
 import WardNotesPage from './pages/WardNotesPage';
+import VoiceAssistant from './components/voice/VoiceAssistant';
 import { getPatients } from './api/client';
 
 function AppShell() {
@@ -27,6 +28,7 @@ function AppShell() {
     <div className="flex min-h-screen bg-slate-100">
       <Sidebar patients={patients} onAddPatient={() => setShowAddForm(true)} />
       <div className="flex-1 flex flex-col overflow-hidden">
+        <VoiceAssistant />
         <Routes>
           <Route path="/" element={
             <DashboardPage
