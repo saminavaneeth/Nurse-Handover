@@ -1,0 +1,5 @@
+node_modules/
+server/handover.db
+server/handover.db-shm
+server/handover.db-wal
+.env

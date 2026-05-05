@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply w-full border border-slate-300 rounded-md px-3 py-1.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+}
+
+@media print {
+  #root > * {
+    display: none !important;
+  }
+  .handover-print-root {
+    display: block !important;
+  }
+  .patient-handover-block {
+    page-break-after: always;
+  }
+  * {
+    color: black !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+  body {
+    font-size: 11pt;
+    font-family: Arial, sans-serif;
+  }
+}
